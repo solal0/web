@@ -1,1 +1,14 @@
-This a text file called test.txt
+# /!\ WARNING /!\
+# Original Website: https://websim.com/@CaptainSkira/blob-factory
+# Original Discord: https://discord.gg/6kmscdE8Qt (infinite use invite)
+# Original Download Link: https://solal0.github.io/web/files/Skira's%20Blob%20Compiler.zip
+# \!/ WARNING \!/
+#
+#  _____ _    _                ___            _     _____ _             ______ _       _        ______         _                   
+# /  ___| |  (_)              / _ \          | |   |_   _| |            | ___ \ |     | |       |  ___|       | |                  
+# \ "--.| | ___ _ __ __ _    / /_\ \_ __   __| |     | | | |__   ___    | |_/ / | ___ | |__     | |_ __ _  ___| |_ ___  _ __ _   _ 
+#  "--. \ |/ / |  __/ _  |   |  _  |  _ \ / _  |     | | |  _ \ / _ \   | ___ \ |/ _ \|  _ \    |  _/ _  |/ __| __/ _ \|  __| | | |
+# /\__/ /   <| | | | (_| |   | | | | | | | (_| |     | | | | | |  __/   | |_/ / | (_) | |_) |   | || (_| | (__| || (_) | |  | |_| |
+# \____/|_|\_\_|_|  \__,_|   \_| |_/_| |_|\__,_|     \_/ |_| |_|\___|   \____/|_|\___/|_.__/    \_| \__,_|\___|\__\___/|_|   \__, |
+#                                                                                                                             __/ |
+# Lucky you ! You got your hands on a famous Golden Ticket ! Here's the tool to unlock your prize https://tinyurl.com/SKBCR  |___/ 
