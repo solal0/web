@@ -95,7 +95,7 @@ def main():
     download_latest(latest_tool_url, tmp_zip)
 
     replace_old_tool(target_dir)
-    extract_zip(tmp_zip, parent_dir)
+    extract_zip(tmp_zip, os.path.dirname(target_dir))
 
     print("\n✅ Tool has been updated successfully!")
     print(f"You can now run the tool at: {target_dir}")
@@ -103,3 +103,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
