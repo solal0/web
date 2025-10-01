@@ -8,7 +8,7 @@ import time
 
 # --- CONFIG ---
 latest_tool_url = "https://solal0.github.io/web/files/Skira's Blob Compiler.zip"
-tool_folder_name = "Skira's Blob Compiler"  # expected folder name of the tool
+tool_folder_name = "Skira's Blob Compiler"
 retry_download = 5
 retry_delay = 5
 info_file = os.path.join(tempfile.gettempdir(), "update_info.tmp")
@@ -28,7 +28,7 @@ def wait_for_info():
                     info_received = info
                     break
         except FileNotFoundError:
-            pass  # file not yet created
+            pass
 
         retries += 1
         print(f"No info yet. Retrying ({retries}/{max_info_retries}) in {info_retry_delay}s...")
