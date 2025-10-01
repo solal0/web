@@ -23,7 +23,14 @@ def wait_for_info():
     while retries < max_info_retries and not info_received:
         try:
             with open(info_file, "r", encoding="utf-8") as f:
+                target_dir = f.read().strip()
                 info = f.read().strip()
+                
+                if not os.path.isdir(target_dir):
+                    print(f"❌ The target folder from info file does not exist: {target_dir}")
+                    input("Press Enter to close...")
+                    sys.exit(1)
+                    
                 if info:
                     info_received = info
                     break
@@ -83,6 +90,11 @@ def replace_old_tool(target_dir):
             input("Press Enter to close...")
             sys.exit(1)
 
+if not os.path.isdir(target_dir):
+    print(f"❌ The target folder from info file does not exist: {target_dir}")
+    input("Press Enter to close...")
+    sys.exit(1)
+
 def main():
     print("Updater started...")
     info = wait_for_info()
@@ -103,4 +115,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
