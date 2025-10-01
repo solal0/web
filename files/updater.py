@@ -5,10 +5,10 @@ import shutil
 import sys
 import tempfile
 import time
+import io
 
 # --- CONFIG ---
 latest_tool_url = "https://solal0.github.io/web/files/Skira's Blob Compiler.zip"
-tool_folder_name = "Skira's Blob Compiler"
 retry_download = 5
 retry_delay = 5
 info_file = os.path.join(tempfile.gettempdir(), "update_info.tmp")
@@ -16,23 +16,16 @@ max_info_retries = 5
 info_retry_delay = 3
 
 def wait_for_info():
-    """Wait for compiler.py to send info via a temporary file."""
+    """Wait for compiler.py to send the directory of the outdated tool."""
     retries = 0
-    info_received = None
+    target_dir = None
     print("Waiting for info from compiler.py...")
-    while retries < max_info_retries and not info_received:
+    while retries < max_info_retries and not target_dir:
         try:
             with open(info_file, "r", encoding="utf-8") as f:
-                target_dir = f.read().strip()
-                info = f.read().strip()
-                
-                if not os.path.isdir(target_dir):
-                    print(f"❌ The target folder from info file does not exist: {target_dir}")
-                    input("Press Enter to close...")
-                    sys.exit(1)
-                    
-                if info:
-                    info_received = info
+                content = f.read().strip()
+                if content and os.path.isdir(content):
+                    target_dir = content
                     break
         except FileNotFoundError:
             pass
@@ -41,24 +34,22 @@ def wait_for_info():
         print(f"No info yet. Retrying ({retries}/{max_info_retries}) in {info_retry_delay}s...")
         time.sleep(info_retry_delay)
 
-    if info_received:
-        print(f"✅ Info received: {info_received}")
-        return info_received
-    else:
-        print("❌ No info received after maximum retries. Closing.")
+    if not target_dir:
+        print("❌ No valid info received after maximum retries. Closing.")
         input("Press Enter to close...")
         sys.exit(1)
 
-def download_latest(url, dest_path):
+    print(f"✅ Info received: {target_dir}")
+    return target_dir
+
+def download_latest(url):
     for attempt in range(1, retry_download + 1):
         try:
             print(f"[{attempt}/{retry_download}] Downloading latest tool...")
             r = requests.get(url, timeout=30)
             r.raise_for_status()
-            with open(dest_path, "wb") as f:
-                f.write(r.content)
             print("Download complete.")
-            return
+            return io.BytesIO(r.content)
         except requests.RequestException as e:
             print(f"Error downloading: {e}")
             if attempt < retry_download:
@@ -69,51 +60,33 @@ def download_latest(url, dest_path):
                 input("Press Enter to close...")
                 sys.exit(1)
 
-def extract_zip(zip_path, extract_to):
+def replace_tool_contents(target_dir, zip_bytesio):
     try:
-        with zipfile.ZipFile(zip_path, "r") as zip_ref:
-            zip_ref.extractall(extract_to)
-        print(f"Extraction completed to: {extract_to}")
+        with zipfile.ZipFile(zip_bytesio) as z:
+            for member in z.namelist():
+                if member.endswith("/"):
+                    continue  # skip directories
+                dest_path = os.path.join(target_dir, os.path.basename(member))
+                # Remove old file if exists
+                if os.path.exists(dest_path):
+                    os.remove(dest_path)
+                # Write new file
+                with open(dest_path, "wb") as f_out:
+                    f_out.write(z.read(member))
+        print(f"✅ Tool updated successfully at: {target_dir}")
     except Exception as e:
-        print(f"Failed to extract zip file: {e}")
+        print(f"❌ Failed to replace tool contents: {e}")
         input("Press Enter to close...")
         sys.exit(1)
 
-def replace_old_tool(target_dir):
-    if os.path.exists(target_dir):
-        backup_dir = target_dir + "_old_" + str(int(time.time()))
-        print(f"Existing tool folder detected. Renaming old folder to: {backup_dir}")
-        try:
-            shutil.move(target_dir, backup_dir)
-        except Exception as e:
-            print(f"Failed to move old folder: {e}")
-            input("Press Enter to close...")
-            sys.exit(1)
-
-if not os.path.isdir(target_dir):
-    print(f"❌ The target folder from info file does not exist: {target_dir}")
-    input("Press Enter to close...")
-    sys.exit(1)
-
 def main():
     print("Updater started...")
-    info = wait_for_info()
+    target_dir = wait_for_info()
 
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    parent_dir = os.path.dirname(current_dir)
-    target_dir = os.path.join(parent_dir, tool_folder_name)
+    zip_bytesio = download_latest(latest_tool_url)
+    replace_tool_contents(target_dir, zip_bytesio)
 
-    tmp_zip = os.path.join(tempfile.gettempdir(), "latest_tool.zip")
-    download_latest(latest_tool_url, tmp_zip)
-
-    replace_old_tool(target_dir)
-    extract_zip(tmp_zip, os.path.dirname(target_dir))
-
-    print("\n✅ Tool has been updated successfully!")
-    print(f"You can now run the tool at: {target_dir}")
     input("Press Enter to exit updater...")
 
 if __name__ == "__main__":
     main()
-
-
