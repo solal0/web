@@ -1,0 +1,24 @@
+{
+  "IconTypes": {
+    "ZIP": "https://via.placeholder.com/80?text=ZIP",
+    "Image": "https://via.placeholder.com/80?text=IMG",
+    "Executable": "https://via.placeholder.com/80?text=EXE",
+    "Video": "https://via.placeholder.com/80?text=VID",
+    "Default": "https://via.placeholder.com/80?text=ICON"
+  },
+  "Collections": {
+    "games": [
+      { "name": "Space Runner", "tags": ["arcade","singleplayer"], "icon": "ZIP", "link": "https://example.com/game1" },
+      { "name": "Castle Siege", "tags": ["strategy","multiplayer"], "icon": "Image", "link": "https://example.com/game2" }
+    ],
+    "videos": [
+      { "name": "Intro Reel", "tags": ["trailer","hd"], "icon": "Video", "link": "https://example.com/video1" }
+    ],
+    "softwares": [
+      { "name": "Mini Editor", "tags": ["productivity"], "icon": "Executable", "link": "https://example.com/soft1" }
+    ],
+    "others": [
+      { "name": "Resource Pack", "tags": ["assets"], "icon": "Image", "link": "https://example.com/other1" }
+    ]
+  }
+}
