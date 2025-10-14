@@ -1,21 +1,21 @@
 {
   "IconTypes": {
-    "ZIP": "https://via.placeholder.com/80?text=ZIP",
-    "Image": "https://via.placeholder.com/80?text=IMG",
-    "Executable": "https://via.placeholder.com/80?text=EXE",
-    "Video": "https://via.placeholder.com/80?text=VID",
-    "Default": "https://via.placeholder.com/80?text=ICON"
+    "ZIP": "https://solal0.github.io/web/files/Hub/zip_ico.png",
+    "IMG": "https://solal0.github.io/web/files/Hub/img_ico.png",
+    "EXE": "https://solal0.github.io/web/files/Hub/exe_ico.png",
+    "VID": "https://solal0.github.io/web/files/Hub/vid_ico.png",
+    "DEF": "https://solal0.github.io/web/files/Hub/idk_ico.png"
   },
   "Collections": {
     "games": [
       { "name": "People Playground", "tags": ["v1.27.5","Singleplayer"], "icon": "ZIP", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199e3cb-743e-7336-a802-fbec9e54d11a.txt" },
-      { "name": "Teardown", "tags": ["Destruction","Singleplayer","Simulation"], "icon": "Image", "link": "https://example.com/game2" }
+      { "name": "Teardown", "tags": ["Destruction","Singleplayer","Simulation"], "icon": "ZIP", "link": "https://example.com/game2" }
     ],
     "videos": [
-      { "name": "South Park - S10 E8", "tags": ["South Park","1080p","WoW","Fun"], "icon": "Video", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199df44-2aa9-7441-a8b7-05a3285cfb17.txt" },
-      { "name": "Back To The Future", "tags": ["1985","1080p","Classic"], "icon": "Video", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199e3c2-501e-7eeb-934d-37d215367828.txt" },
-      { "name": "Back To The Future 2", "tags": ["1989","1080p","Classic"], "icon": "Video", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199e3c4-9f18-7996-94f0-4e62d581919f.txt" },
-      { "name": "Back To The Future 3", "tags": ["1990","1080p","Classic"], "icon": "Video", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199e3c6-3de1-777a-9ee7-9c2264b83477.txt" }
+      { "name": "South Park - S10 E8", "tags": ["South Park","1080p","WoW","Fun"], "icon": "VID", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199df44-2aa9-7441-a8b7-05a3285cfb17.txt" },
+      { "name": "Back To The Future", "tags": ["1985","1080p","Classic"], "icon": "ZIP", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199e3c2-501e-7eeb-934d-37d215367828.txt" },
+      { "name": "Back To The Future 2", "tags": ["1989","1080p","Classic"], "icon": "ZIP", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199e3c4-9f18-7996-94f0-4e62d581919f.txt" },
+      { "name": "Back To The Future 3", "tags": ["1990","1080p","Classic"], "icon": "ZIP", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199e3c6-3de1-777a-9ee7-9c2264b83477.txt" }
     ],
     "softwares": [
       { "name": "Mini Editor", "tags": ["productivity"], "icon": "Executable", "link": "https://example.com/soft1" }
