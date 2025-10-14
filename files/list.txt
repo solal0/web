@@ -9,16 +9,19 @@
   "Collections": {
     "games": [
       { "name": "Space Runner", "tags": ["arcade","singleplayer"], "icon": "ZIP", "link": "https://example.com/game1" },
-      { "name": "Castle Siege", "tags": ["strategy","multiplayer"], "icon": "Image", "link": "https://example.com/game2" }
+      { "name": "Castle Siege", "tags": ["strategy","multiplayer"], "icon": "Image", "link": "https://example.com/game2" },
     ],
     "videos": [
-      { "name": "Intro Reel", "tags": ["trailer","hd"], "icon": "Video", "link": "https://example.com/video1" }
+      { "name": "South Park - S10 E8", "tags": ["South Park","1080p","WoW","Fun"], "icon": "Video", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199df44-2aa9-7441-a8b7-05a3285cfb17.txt" },
+      { "name": "Back To The Future", "tags": ["1985","1080p","Classic"], "icon": "Video", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199e3c2-501e-7eeb-934d-37d215367828.txt" },
+      { "name": "Back To The Future 2", "tags": ["1989","1080p","Classic"], "icon": "Video", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199e3c4-9f18-7996-94f0-4e62d581919f.txt" },
+      { "name": "Back To The Future 3", "tags": ["1990","1080p","Classic"], "icon": "Video", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199e3c6-3de1-777a-9ee7-9c2264b83477.txt" },
     ],
     "softwares": [
-      { "name": "Mini Editor", "tags": ["productivity"], "icon": "Executable", "link": "https://example.com/soft1" }
+      { "name": "Mini Editor", "tags": ["productivity"], "icon": "Executable", "link": "https://example.com/soft1" },
     ],
     "others": [
-      { "name": "Resource Pack", "tags": ["assets"], "icon": "Image", "link": "https://example.com/other1" }
+      { "name": "Resource Pack", "tags": ["assets"], "icon": "Image", "link": "https://example.com/other1" },
     ]
   }
 }
