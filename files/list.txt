@@ -18,10 +18,10 @@
       { "name": "Back To The Future 3", "tags": ["1990","1080p","Classic"], "icon": "Video", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199e3c6-3de1-777a-9ee7-9c2264b83477.txt" }
     ],
     "softwares": [
-      { "name": "Mini Editor", "tags": ["productivity"], "icon": "Executable", "link": "https://example.com/soft1" },
+      { "name": "Mini Editor", "tags": ["productivity"], "icon": "Executable", "link": "https://example.com/soft1" }
     ],
     "others": [
-      { "name": "Resource Pack", "tags": ["assets"], "icon": "Image", "link": "https://example.com/other1" },
+      { "name": "Resource Pack", "tags": ["assets"], "icon": "Image", "link": "https://example.com/other1" }
     ]
   }
 }
