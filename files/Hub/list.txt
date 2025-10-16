@@ -8,19 +8,19 @@
   },
   "Collections": {
     "games": [
-      { "name": "People Playground", "tags": ["v1.27.5","Singleplayer"], "icon": "ZIP", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199e3cb-743e-7336-a802-fbec9e54d11a.txt?silent" },
-      { "name": "Teardown", "tags": ["Destruction","Singleplayer","Simulation"], "icon": "ZIP", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199e533-2aad-748e-8be6-2e9cb0bbfeda.txt?silent" },
-      { "name": "The Long Drive", "tags": ["Driving","Multiplayer","v2022.11.11"], "icon": "ZIP", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199e4c1-a425-720a-96ac-ccd31ccfd4c4.txt?silent" },
-      { "name": "Cyberpunk 2077", "tags": ["Future","Singplayer","OpenWorld"], "icon": "ZIP", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199ec41-fcf9-750c-bf4d-f3f7494e1544.txt?silent" }
+      { "name": "People Playground", "tags": ["v1.27.5","Singleplayer"], "icon": "ZIP", "link": "https://skira-downloader.netlify.app/download/https://api.websim.com/blobs/0199e3cb-743e-7336-a802-fbec9e54d11a.txt?silent" },
+      { "name": "Teardown", "tags": ["Destruction","Singleplayer","Simulation"], "icon": "ZIP", "link": "https://skira-downloader.netlify.app/download/https://api.websim.com/blobs/0199e533-2aad-748e-8be6-2e9cb0bbfeda.txt?silent" },
+      { "name": "The Long Drive", "tags": ["Driving","Multiplayer","v2022.11.11"], "icon": "ZIP", "link": "https://skira-downloader.netlify.app/download/https://api.websim.com/blobs/0199e4c1-a425-720a-96ac-ccd31ccfd4c4.txt?silent" },
+      { "name": "Cyberpunk 2077", "tags": ["Future","Singplayer","OpenWorld"], "icon": "ZIP", "link": "https://skira-downloader.netlify.app/download/https://api.websim.com/blobs/0199ec41-fcf9-750c-bf4d-f3f7494e1544.txt?silent" }
     ],
     "videos": [
-      { "name": "South Park - S10 E8", "tags": ["South Park","1080p","WoW","Fun"], "icon": "VID", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199df44-2aa9-7441-a8b7-05a3285cfb17.txt?silent" },
-      { "name": "Back To The Future", "tags": ["1985","1080p","Classic"], "icon": "ZIP", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199e3c2-501e-7eeb-934d-37d215367828.txt?silent" },
-      { "name": "Back To The Future 2", "tags": ["1989","1080p","Classic"], "icon": "ZIP", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199e3c4-9f18-7996-94f0-4e62d581919f.txt?silent" },
-      { "name": "Back To The Future 3", "tags": ["1990","1080p","Classic"], "icon": "ZIP", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199e3c6-3de1-777a-9ee7-9c2264b83477.txt?silent" }
+      { "name": "South Park - S10 E8", "tags": ["South Park","1080p","WoW","Fun"], "icon": "VID", "link": "https://skira-downloader.netlify.app/download/https://api.websim.com/blobs/0199df44-2aa9-7441-a8b7-05a3285cfb17.txt?silent" },
+      { "name": "Back To The Future", "tags": ["1985","1080p","Classic"], "icon": "ZIP", "link": "https://skira-downloader.netlify.app/download/https://api.websim.com/blobs/0199e3c2-501e-7eeb-934d-37d215367828.txt?silent" },
+      { "name": "Back To The Future 2", "tags": ["1989","1080p","Classic"], "icon": "ZIP", "link": "https://skira-downloader.netlify.app/download/https://api.websim.com/blobs/0199e3c4-9f18-7996-94f0-4e62d581919f.txt?silent" },
+      { "name": "Back To The Future 3", "tags": ["1990","1080p","Classic"], "icon": "ZIP", "link": "https://skira-downloader.netlify.app/download/https://api.websim.com/blobs/0199e3c6-3de1-777a-9ee7-9c2264b83477.txt?silent" }
     ],
     "softwares": [
-      { "name": "DaVinci Resolve", "tags": ["Productivity","Editing","Montage"], "icon": "ZIP", "link": "https://satbfobc.netlify.app/download/https://api.websim.com/blobs/0199e51a-1179-7387-829c-58f0e965ff24.txt?silent" }
+      { "name": "DaVinci Resolve", "tags": ["Productivity","Editing","Montage"], "icon": "ZIP", "link": "https://skira-downloader.netlify.app/download/https://api.websim.com/blobs/0199e51a-1179-7387-829c-58f0e965ff24.txt?silent" }
     ],
     "others": [
       { "name": "Resource Pack", "tags": ["assets"], "icon": "IMG", "link": "https://example.com/other1" }
