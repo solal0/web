@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skira And The Blob Factory</title>
+  <style>
+    body {
+      font-family: "Georgia", "Times New Roman", serif;
+      background-color: #fdfdfd;
+      color: #2f2f2f;
+      margin: 60px auto;
+      max-width: 900px;
+      line-height: 1.7;
+      padding: 0 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      margin-bottom: 0.6em;
+      color: #2c3e50;
+      letter-spacing: 0.5px;
+    }
+
+    h2 {
+      margin-top: 2.5em;
+      font-size: 1.8em;
+      color: #34495e;
+      border-bottom: 2px solid #dcdcdc;
+      padding-bottom: 6px;
+    }
+
+    h3 {
+      margin-top: 1.4em;
+      margin-left: 10px;
+      font-size: 1.3em;
+      color: #2c3e50;
+    }
+
+    nav.toc {
+      background-color: #f4f6f7;
+      border: 1px solid #dcdcdc;
+      border-radius: 10px;
+      padding: 1.2em 1.5em;
+      margin-bottom: 2.5em;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    nav.toc strong {
+      display: block;
+      font-size: 1.2em;
+      margin-bottom: 0.5em;
+      color: #2c3e50;
+    }
+
+    nav.toc a {
+      display: block;
+      margin: 0.25em 0;
+      text-decoration: none;
+      color: #2980b9;
+      font-weight: bold;
+      transition: color 0.2s ease;
+    }
+
+    nav.toc a:hover {
+      color: #1b6391;
+      text-decoration: underline;
+    }
+
+    nav.toc a.subchapter {
+      margin-left: 20px;
+      font-weight: normal;
+      color: #2d7bb5;
+    }
+
+    p {
+      margin: 0.8em 0;
+      text-align: justify;
+    }
+
+    ol, ul {
+      margin-left: 25px;
+    }
+
+    li {
+      margin: 0.4em 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5em 0;
+      font-size: 0.95em;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+
+    th {
+      background-color: #f0f3f4;
+      color: #2c3e50;
+    }
+
+    tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+
+    strong {
+      color: #222;
+    }
+
+    em {
+      color: #555;
+      font-style: italic;
+    }
+
+    section {
+      margin-top: 40px;
+      padding: 10px 15px;
+    }
+
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      color: #777;
+      font-size: 0.9em;
+      margin-top: 3em;
+      padding-top: 1em;
+      border-top: 1px solid #eee;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<p style="font-size: 1.5em;">&nbsp;</p>
+<p>&nbsp;</p>
+<h1><strong>Skira And The Blob Factory</strong></h1>
+<nav><strong>Table of Contents</strong></nav><nav>|<a href="#chapter1"><strong><a href="#chapter1">Skira's Blob Compiler</a></strong></a></nav><nav>|\_&nbsp;<a class="subchapter" href="#chapter1a">Details/Notes</a></nav><nav>|\_&nbsp;<a class="subchapter" href="#chapter1b">First Steps into the Blob Factory</a></nav><nav>|\_&nbsp;<a class="subchapter" href="#chapter1c">Advanced Steps</a></nav><nav>|</nav><nav>|<strong><a href="#chapter2">Compiler Tools</a></strong></nav><nav><nav>|\_&nbsp;<a class="subchapter" href="#chapter2a">Details/Notes</a></nav><nav>|\_&nbsp;<a class="subchapter" href="#chapter2b">Windows</a></nav><nav>|\_&nbsp;<a class="subchapter" href="#chapter2c">Android</a></nav><nav>|\_&nbsp;<a class="subchapter" href="#chapter2d">Web</a></nav><nav>|</nav><nav>|<strong><a href="#chapter3">Extras</a></strong></nav></nav><nav><nav>|\_&nbsp;<a class="subchapter" href="#chapter3a">Common/Known Issues</a></nav><nav>|\_&nbsp;<a class="subchapter" href="#chapter3b">Change Logs</a></nav><nav>|\_&nbsp;<a class="subchapter" href="#chapter3c">URLs</a></nav><nav>|\_&nbsp;<a class="subchapter" href="#chapter3d">Versions</a></nav><nav>&nbsp;\_ <a href="#chapter3e">Samples</a></nav><nav></nav><nav></nav></nav>
+<section></section>
+<h2 id="chapter1"><span style="text-decoration: underline;"><strong>Skira's Blob Factory</strong></span></h2>
+<h3 id="chapter1a">Details/Notes</h3>
+<nav><nav></nav></nav><nav>Skira's Blob Factory is an online tool made by&nbsp;<a href="https://websim.com/@CaptainSkira" target="_blank" rel="noopener">@CaptainSkira</a> on WebSim.com</nav><nav>With the power of Websim's blob urls the tool allows anyone to upload a file and get a link to it<em>(1)</em>.</nav><nav>The tool's purpose is to give users a simple way of sharing files easily from one end to another.</nav><nav>If you are familiar with blob urls you might know that they are temporary which is true... but WebSim.com does not use your average blob url<em>(2)</em>, which means imported files can last until someone deletes them manually.</nav><nav></nav><nav></nav><nav></nav><nav></nav><nav></nav><nav></nav><nav><em>(1)&nbsp;</em>Above ~15Mb a compiler tool is required to download the file. Read&nbsp;<a href="#chapter1c">Advanced Steps</a>&nbsp;to understand how to import 15Mb+ files and Compiler Tools <a href="#chapter2a">Details/Notes</a>&nbsp;to know how to download your file.</nav><nav><em>(2)</em>&nbsp;Normal blob url "blob:https://example.com" / WebSim's blob url "https://example.com/blobs/"</nav><nav></nav><nav></nav><nav></nav><nav></nav><nav></nav><nav></nav><nav><strong></br>Stats (</strong><span style="text-decoration: underline;">collected with 800/900Mbps on ookla speed test</span><strong>):</strong></nav><nav>-&nbsp;<a href="https://blob-factory--captainskira.on.websim.com/" target="_blank" rel="noopener">Upload</a>&nbsp;VS <a href="https://skira-downloader.netlify.app/" target="_blank" rel="noopener">Download</a></nav><nav>&nbsp; &nbsp;&nbsp; 5.2Gb -&gt; Upload: 14:34m /&nbsp;Download: 1:40m</nav><nav>&nbsp; &nbsp;&nbsp; 150Mb -&gt; Upload: 45s / Download: 6s</nav><nav>- File to Ticket</nav><nav>&nbsp; &nbsp;&nbsp; 153698304 octects -&gt; 4096 octects (153Mb -&gt; 4Ko) (from disk size)</nav><nav>&nbsp; &nbsp;&nbsp; calculated: 100Gb -&gt; ~3Mo</nav><nav>- Upload Speed</nav><nav>&nbsp; &nbsp;&nbsp; ~200Mb uploaded takes ~60s</nav><nav>- Upload Optimization</nav><nav>&nbsp; &nbsp;&nbsp; [✅] 150Mb -&gt; 0:45m<br />&nbsp; &nbsp;&nbsp; [❌] 150Mb -&gt; 4:45m</nav><nav></nav>
+<h3 id="chapter1b">First Steps into the Blob Factory</h3>
+<nav>Here's a step-by-step guide on how to use the factory for yourself (I recommend you following this guide and only after having your first working blob url checking out <a href="#chapter1c">Avanced Steps</a>):</nav>
+<ol>
+<li>Make sure you are on <a href="https://blob-factory--captainskira.on.websim.com/" target="_blank" rel="noopener">Skira's official Blob Factory</a><em>.&nbsp;</em>(<a href="#chapter3c">URLs</a>)</li>
+<li>You'll now see 5 buttons in front of you. Click Upload a file and select the file of your choice (<strong>must be under 10Mb</strong>)</li>
+<li>The Generate Link button who was grayed out should now become brighter and clickable. Click it.</li>
+<li>After few seconds of wait a link will be generated at the bottom of the website. If you see it, you've successfully made your first upload !</li>
+<li>Click the blue text to open your imported file in a new page or click the copy icon next to it to copy the url to clipboard. You can now share this url to anyone.</li>
+</ol>
+<h3 id="chapter1c">Advanced Steps</h3>
+<nav><span style="text-decoration: underline;"><strong>Settings options, what do they do ?:</strong></span></nav><nav></nav><nav></nav><nav><strong>Bypass Blob Max Size</strong> -&gt; Changes the original limit of 10Mb to ~15Mb, only usefull if your file is just a bit bigger than 10Mb. Wether this option is checked or not you'll get a single url to your file.</nav><nav><strong>Big Files Handling</strong> -&gt; When importing a file larger than 10Mb/15Mb you need to check that setting. It will cut your imported file in as many chunks of 10Mb as needed and provide you a list of urls all containing a piece of your file.</nav><nav><strong>Accelerated Uploads</strong> -&gt; Requires <strong>Big Files Handling </strong>to be checked otherwise it won't work. Checking it will, on file imported and urls starting to generate, create multiple workers to upload ~8 parts at the same time. This option is more than recommended since without it a 200Mb file takes ~6 minutes to upload while if it was used it would only take ~60 seconds.</nav><nav><strong>Make File Private</strong> -&gt;&nbsp;Requires <strong>Big Files Handling </strong>to be checked otherwise it won't work. When checked a textbox will show up, input a password or whatever you want inside. Close the settings popup and click Generate Link. Now each imported part of your file will be "obfuscated".</nav><nav></nav><nav></nav><nav></nav><nav></nav><nav></nav><nav><span style="text-decoration: underline;"><strong></br>Advanced step-by-step guide (15Mb+):</strong></span></nav>
+<ol>
+<li>Same steps as for First Steps <a href="#chapter1b">step-by-step-guide</a>&nbsp;but, before uploading your file, open settings (second button from the right or ⚙️ Button) and check&nbsp;<strong>Big Files Handling</strong>.</li>
+<li>proceed by importing your file and clicking Generate Link.</li>
+<li>A list of queued parts will show up. Wait until all parts have their url to proceed.</li>
+<li>Once all parts have been uploaded you have 2 options (Copy all is broken):</li>
+<li><strong>[Option 1]:</strong> You click "Copy Golden Link" who will make you copy a link to your clipboard that when opened will trigger the download of your file using the <a href="https://skira-downloader.netlify.app/" target="_blank" rel="noopener">Online Compiler</a>&nbsp;in silent mode (sample)</li>
+<li><strong>[Option 2]:</strong> You click "Download Golden Ticket" who will make you download a very lightweight file called {full_file_name}.golden_ticket.txt. This file can be given to all three tools to rebuild the original file. (<a href="#chapter3e">sample</a>)</li>
+<li>If you choosed the golden ticket file you can scroll down to see which tool sounds the best to you and how to use them to turn your golden ticket back into the original file.</li>
+</ol>
+<h2 id="chapter2"><span style="text-decoration: underline;">Compiler Tools</span></h2>
+<section>
+<h3 id="chapter2a">Details/Notes</h3>
+<nav><strong>Windows</strong> tool can handle files of <strong>any size</strong> and is <strong>very fast</strong>.</nav><nav><nav><strong>Android</strong> tool is <strong>slower</strong> than the two other tools and might be <strong>limited</strong> above a certain file size (not confirmed).</nav><nav><nav><strong>Web</strong> tool works well and is <strong>pretty fast</strong>&nbsp;but is <strong>limited</strong> above a certain file size (~10Gb). He is also sometimes super slow, fetching parts 1 by 1 without providing any errors. And some other times he is super fast.</nav></nav></nav>
+<h3 id="chapter2b">Windows</h3>
+<nav><span style="text-decoration: underline;"><strong>Step-by-step quide:</strong></span></nav><nav>note: step 1 to 6 are only required once.</nav>
+<ol>
+<li>Download the latest (or 3.14.0) version of python at&nbsp;<a href="https://www.python.org/downloads/" target="_blank" rel="noopener">https://www.python.org/downloads/</a>. Do not download python install manager. Instead click just below the button to download the standalone.</li>
+<li>Run&nbsp;python-{latest_version}-amd64.exe and in the window check "Use admin privileges when installing py.exe" and "Add python.exe to PATH" then click Install Now.</li>
+<li>Press Yes in the next popup and then wait for Python to install.</li>
+<li>Once python Setup was successful press close and open a command prompt by typing cmd in your windows search bar and hitting enter.</li>
+<li>In the command prompt type or copy and paste "pip install requests" before hitting enter. Now wait for the installation to complete.</li>
+<li>Once downloaded, close the command prompt and&nbsp;download the lastest version of Skira's Blob Compiler for Windows (<a href="https://solal0.github.io/web/files/Skira's%20Blob%20Compiler.zip" target="_blank" rel="noopener">download</a>)</li>
+<li>Extract Skira's Blob Compiler.zip and execute/double click compiler.py located inside the folder you extracted.</li>
+<li>If an update is required let it do it's job, press enter when prompted to and relaunch compiler.py</li>
+<li>Wait for the golden ticket picker to show up, select the golden ticket you want, select slow or fast option (I recommended using fast) and let the tool do his job.</li>
+<li>When all parts have been imported the tool will combine them all as the original file inside the Output folder located in the same directory as compiler.py</li>
+<li>If your pc doesn't have enough space the script will ask you to free a certain amount to proceed.</li>
+</ol>
+</section>
+<section>
+<h3 id="chapter2c">Android</h3>
+<nav><strong>Step-by-step quide:</strong></nav>
+<ol>
+<li>Download the lastest version of Skira's Blob Compiler for Android (<a href="https://solal0.github.io/web/files/Android/SkiraBlobCompiler.apk" target="_blank" rel="noopener">download</a>)</li>
+<li>Open SkiraBlobCompiler.apk and install the app. If play protect ask to verify the app, proceed.</li>
+<li>Then open the app and inside click Select Golden Ticket File.</li>
+<li>Select the golden ticket you want and back in the app click Proceed if you have enough free space.</li>
+<li>The app will ask you where to save the the file you're about to download, select a folder and click "Save"</li>
+<li>Now you can wait while the app will import each part 1 by 1. When all parts have been successfully imported you can find the file where you told the app to save it at.</li>
+</ol>
+</section>
+<section><nav>
+<h3 id="chapter2d">Web</h3>
+</nav><nav><strong>Step-by-step quide:</strong></nav><nav>
+<ol>
+<li>Go to Skira Web Compiler (<a href="https://skira-downloader.netlify.app/" target="_blank" rel="noopener">redirect</a>)</li>
+<li>Click Choose .txt / .json and select your golden ticket. (you can also click Paste links / JSON and put a link to your golden ticket raw or just the content of your golden ticket.)</li>
+<li>Change download speed to Slow or Fast if you want and click Start.</li>
+<li>The website will ask where to save your file, give it a location/directory on your pc and click save.</li>
+<li>Now you can wait while the compiler will import each part 1 by 1. When all parts have been successfully imported you can find the file where you told the website to save it at.</li>
+</ol>
+</nav></section>
+<h2 id="chapter3"><span style="text-decoration: underline;">Extras</span></h2>
+<h3 id="chapter3a">Common/Known Issues</h3>
+<p><strong>Slow Upload/Download</strong> -&gt; Bad Internet/Huge File<br /><strong>Web Compiler printing lot of errors/imported parts value going up and down forever</strong> -&gt; most likely to be a memory problem. It happens after ~10Gb downloaded because of the memory being full. There is no fix as of now other than downloading only 10Gb or less files with this Compiler.<br /><strong>Estimated Time not matching (way higher/lower) </strong>-&gt; The math done to get these estimated values uses the stats given by a pc who has 800-900Mbps of Download speed and 600-700Mbps of Upload speed. The faster your internet is, the faster files Upload and Download will be.<br /><br />If you have any other issue, please report them via <a href="https://discord.com/invite/6kmscdE8Qt" target="_blank" rel="noopener">Discord</a>&nbsp;and i'll see what I can do.</p>
+<section>
+<h3 id="chapter3b">Change Logs</h3>
+<nav><strong>[V1] [WINDOWS]:</strong> Handle files called "Golden Ticket.json" containing a name variable and a table of parts. Reads all the parts inside the table and import/add them one by one into a single file called whatever the name variable is.</nav><nav><strong>[V1.1] [WINDOWS]: </strong>Now handles "{full_file_name}.golden_ticket.json" and&nbsp;"{full_file_name}.golden_ticket.txt". Same ticket content as before but cleaner. An update checker has been added</nav><nav><strong>[V1.2] [WINDOWS]:</strong> Added password handling, when adding a password to your imported file on Skira's Blob Factory the password is saved inside the golden ticket, if found by the tool it will use it to decrypt each part.</nav><nav><strong>[V1] [ANDROID]:</strong> Android compiler is out ! Same thing as the windows V1.1 but for mobile and with more details like calculated file size, remaining device space and some other stuff. Does not have update check but has the password detection and part decryption.</nav><nav><strong>[V1.3] [WINDOWS]:</strong> Huge optimization added, tool now downloads as fast as the web compiler but can handle 100Gb+ files. Calculated size added next to calculated speed when choosing Slow or Fast method. The tool will make up to 16 workers depending on your pc efficiency to import parts as fast as possible. All imported parts will be added in a folder called ".temp" inside the Output folder and once all parts are imported they will be combined into the original file. Tool requires ~two times the file size you're downloading to import parts and combine them.</nav><nav></nav>
+<h3 id="chapter3c">URLs</h3>
+<p>Relevant/Official URLs, links, and resources.</p>
+<table style="width: 406px; height: 88px;">
+<tbody>
+<tr>
+<td style="width: 10px;">
+<table class="editorDemoTable" style="height: 199px; width: 400px;">
+<tbody>
+<tr>
+<td style="width: 158px; text-align: center;">
+<p><strong>Name</strong></p>
+</td>
+<td style="width: 176px; text-align: center;"><strong>Description</strong></td>
+<td style="width: 138.719px; text-align: center;"><strong>URL</strong></td>
+</tr>
+<tr>
+<td style="width: 158px;">Skira's Blob Factory</td>
+<td style="width: 176px;">Main Website, used to turn files into small golden tickets</td>
+<td style="width: 138.719px;"><a href="https://blob-factory--captainskira.on.websim.com/" target="_blank" rel="noopener">Redirect</a></td>
+</tr>
+<tr>
+<td style="width: 158px;">Web Blob Compiler</td>
+<td style="width: 176px;">used by Skira's Blob Factory and Hub</td>
+<td style="width: 138.719px;"><a href="https://skira-downloader.netlify.app/" target="_blank" rel="noopener">Redirect</a></td>
+</tr>
+<tr>
+<td style="width: 158px;">Skira's Hub</td>
+<td style="width: 176px;">List all uploaded files</td>
+<td style="width: 138.719px;"><a href="https://skira-hub.netlify.app/" target="_blank" rel="noopener">Redirect</a></td>
+</tr>
+<tr>
+<td style="width: 158px;">Discord</td>
+<td style="width: 176px;">In case you need further help or have questions to ask.</td>
+<td style="width: 138.719px;"><a href="https://discord.com/invite/6kmscdE8Qt" target="_blank" rel="noopener">Redirect</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<h3 id="chapter3d">Versions</h3>
+<p>Archive of previous versions, updates and latest releases.</p>
+</section>
+<table class="editorDemoTable" style="width: 400px;">
+<tbody>
+<tr>
+<td style="width: 57px; text-align: center;"><strong>Versions</strong></td>
+<td style="width: 71px; text-align: center;"><strong>Devices</strong></td>
+<td style="width: 24.7344px; text-align: center;"><strong>URLs</strong></td>
+</tr>
+<tr>
+<td style="width: 57px; text-align: center;">Latest</td>
+<td style="width: 71px; text-align: center;">Android</td>
+<td style="width: 24.7344px;"><a href="https://solal0.github.io/web/files/Android/SkiraBlobCompiler.apk" target="_blank" rel="noopener">Redirect</a></td>
+</tr>
+<tr>
+<td style="width: 57px; text-align: center;">Latest</td>
+<td style="width: 71px; text-align: center;">Windows</td>
+<td style="width: 24.7344px;"><a href="https://github.com/solal0/web/raw/refs/heads/main/files/Skira's%20Blob%20Compiler.zip" target="_blank" rel="noopener">Redirect</a></td>
+</tr>
+<tr>
+<td style="width: 57px; text-align: center;">v1.3</td>
+<td style="width: 71px; text-align: center;">Windows</td>
+<td style="width: 24.7344px;"><a href="https://solal0.github.io/web/files/Skira's%20Blob%20Compiler%20v1.3.zip" target="_blank" rel="noopener">Redirect</a></td>
+</tr>
+<tr>
+<td style="width: 57px; text-align: center;">v1.2</td>
+<td style="width: 71px; text-align: center;">Windows</td>
+<td style="width: 24.7344px;"><a href="https://solal0.github.io/web/files/Skira's%20Blob%20Compiler%20v1.2.zip" target="_blank" rel="noopener">Redirect</a></td>
+</tr>
+<tr>
+<td style="width: 57px; text-align: center;">v1.1</td>
+<td style="width: 71px; text-align: center;">Windows</td>
+<td style="width: 24.7344px;"><a href="https://solal0.github.io/web/files/Skira's%20Blob%20Compiler%20v1.1.zip" target="_blank" rel="noopener">Redirect</a></td>
+</tr>
+<tr>
+<td style="width: 57px; text-align: center;">v1</td>
+<td style="width: 71px; text-align: center;">Windows</td>
+<td style="width: 24.7344px;"><a href="https://solal0.github.io/web/files/Skira's%20Blob%20Compiler%20v1.zip" target="_blank" rel="noopener">Redirect</a></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h3 id="chapter3e">Samples</h3>
+<p>South Park Se10 Ep8:</p>
+<table class="editorDemoTable" style="width: 226.438px;">
+<tbody>
+<tr>
+<td style="width: 138px; text-align: center;"><strong>Options</strong></td>
+<td style="width: 63.4375px; text-align: center;"><strong>URLs</strong></td>
+</tr>
+<tr>
+<td style="width: 138px; text-align: center;">1 (web download)</td>
+<td style="width: 63.4375px; text-align: center;"><a href="https://skira-downloader.netlify.app/download/https://api.websim.com/blobs/0199f306-450c-7194-ac2a-8e88760e81bb.txt?silent" target="_blank" rel="noopener">Redirect</a></td>
+</tr>
+<tr>
+<td style="width: 138px; text-align: center;">2 (golden ticket)</td>
+<td style="width: 63.4375px; text-align: center;"><a href="https://clean-interactive-starter--skira.on.websim.com/" target="_blank" rel="noopener">Redirect</a></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
